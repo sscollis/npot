@@ -1,0 +1,10 @@
+6-4-97
+
+This is the nonconservative compressible potential flow solver.
+
+6-24-96
+
+confpc -y1
+ dymin = 0.02
+ nx, ny = 256 63
+ xmax, ymax = 1500 1500
