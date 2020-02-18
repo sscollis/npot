@@ -1,7 +1,9 @@
 O-grid for a circular cylinder
 
 1. Check the paths in run.sh
-2. ./run.sh
+2. Note that you need the cyl mesh generator and
+   pre pre-processors from lns3d
+3. ./run.sh
 
 To use paraview you may want to do:
 
