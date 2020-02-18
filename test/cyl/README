@@ -1,0 +1,11 @@
+Level-set grid for 1/2 circular cylinder
+
+1. Check the paths in run.sh
+2. ./run.sh
+
+To use paraview you may want to do:
+
+ln -s grid.dat grid.xyz
+
+S. Scott Collis
+Tue Feb 18 06:38:37 MST 2020
