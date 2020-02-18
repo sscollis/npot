@@ -623,12 +623,14 @@
         endif
 
         if (.true.) then
+        open(unit=10, file='cp.dat', form='formatted')
         do i = nb,nx
           ia = nx - i + 1
           write(10,"(8(1pe12.4E3,1x))")  xy(1,i,1),  q(4,i,1), q(3,i,1), &
                                          xy(1,ia,1), q(4,ia,1), q(3,ia,1)
 !         write(*,"(8(1pe9.2,1x))") m(1,i,1), m(2,i,1), m(3,i,1), m(4,i,1)
         end do
+        close(10)
         end if
 
 !.... write out a Plot3d file
