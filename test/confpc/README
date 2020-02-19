@@ -1,0 +1,13 @@
+Conformal mesh for a parabolic cylinder
+
+1. Check the paths in run.sh
+2. Note that you need the cyl mesh generator and
+   pre pre-processors from lns3d
+3. ./run.sh
+
+To use paraview you may want to do:
+
+ln -s grid.dat grid.xyz
+
+S. Scott Collis
+Wed Feb 19 06:22:30 MST 2020
