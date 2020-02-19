@@ -5,6 +5,9 @@ Conformal mesh for a parabolic cylinder
    pre pre-processors from lns3d
 3. ./run.sh
 
+Note that to converge this it is helpful to restart with
+several different values of sigma 
+
 To use paraview you may want to do:
 
 ln -s grid.dat grid.xyz
