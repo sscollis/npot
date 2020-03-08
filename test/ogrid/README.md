@@ -16,7 +16,7 @@ To use paraview you may want to do:
 ### Sample Results
 
 #### Contours of streamwise velocity
-![Streamwise velocity](https://github.com/sscollis/npot/blob/master/test/ogrid/ogrid.png)
+![Streamwise velocity](https://github.com/sscollis/npot/blob/master/test/ogrid/u.png)
 
 #### Closeup of mesh
 ![Mesh](https://github.com/sscollis/npot/blob/master/test/ogrid/mesh.png)
