@@ -2,10 +2,6 @@
 
 Mach 0.4 compressible, potential flow past a circular cylinder using an O-grid.
 
-![Streamwise velocity](https://github.com/sscollis/npot/blob/master/test/ogrid/ogrid.png)
-
-![Mesh](https://github.com/sscollis/npot/blob/master/test/ogrid/mesh.png)
-
 ### Steps to make the run
 
 1. Check the paths in `run.sh`
@@ -16,6 +12,14 @@ Mach 0.4 compressible, potential flow past a circular cylinder using an O-grid.
 To use paraview you may want to do:
 
     ln -s grid.dat grid.xyz
+
+### Sample Results
+
+#### Contours of streamwise velocity
+![Streamwise velocity](https://github.com/sscollis/npot/blob/master/test/ogrid/ogrid.png)
+
+#### Closeup of mesh
+![Mesh](https://github.com/sscollis/npot/blob/master/test/ogrid/mesh.png)
 
 S. Scott Collis\
 Tue Feb 18 06:38:00 MST 2020
