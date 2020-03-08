@@ -54,7 +54,7 @@
         integer :: type=0
         integer, parameter :: mfile = 3 
         integer :: nfile=0, narg, iarg, ifile(mfile)
-        character*80 :: arg 
+        character(80) :: arg 
 
 !.... mesh
 

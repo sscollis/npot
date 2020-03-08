@@ -1,5 +1,5 @@
 0.4              ! Mach number
-100,1              ! sigma, omega
+1,1              ! sigma, omega
 3500             ! niter
 1                ! restart flag
 0.0              ! sweep angle (deg)
