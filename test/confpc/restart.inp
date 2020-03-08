@@ -1,6 +1,6 @@
 0.4              ! Mach number
-1,1              ! sigma, omega
-3500             ! niter
+100,1            ! sigma, omega
+2000             ! niter
 1                ! restart flag
 0.0              ! sweep angle (deg)
 0, 1, 0          ! ispg, As, xs
