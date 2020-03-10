@@ -10,7 +10,7 @@ Mach 0.4 potential flow past a parabolic cylinder
    that you need to use the `-ms` option when running `npot`
 4. `./run.sh`
 
-Note that to converge this it is helpful to restart with
+Note that to enhanse convergence, this script restarts with
 several different values of `sigma` 
 
 ### Visualization
