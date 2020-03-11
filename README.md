@@ -14,7 +14,7 @@ To build:
     ln -s <platform>.mak Makfile
     make
 
-where, for example, <platform> is gcc when using gfortran on Mac OS X.
+where, for example, <platform> is `gcc` when using `gfortran` on Mac OS X.
 
 Notes:
 
