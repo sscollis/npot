@@ -8,6 +8,7 @@ a conformal mesh.
 1. Check the paths in `run.sh`
 2. Note that you need the `mse` mesh generator
 3. `./run.sh`
+4. `cleanup` returns the directory to original condition
 
 Note that to enhanse convergence, this script restarts with
 several different values of `sigma`.  While this works, it
