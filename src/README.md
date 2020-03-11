@@ -12,7 +12,7 @@ To build do the following:
     ln -s <platform>.mak Makefile
     make
 
-Where, for example, <platform> is `gcc` when using `gfortran` on Mac OS X
+Where, for example, `<platform>` is `gcc` when using `gfortran` on Mac OS X
 
-S. Scott Collis
+S. Scott Collis\
 Wed Mar 11 07:00:11 MDT 2020
