@@ -29,5 +29,9 @@ To use `paraview` you may want to do:
 
 ![Mesh](https://github.com/sscollis/npot/blob/master/test/mse/mesh.png)
 
+#### Computational Mesh close-up
+
+![Mesh](https://github.com/sscollis/npot/blob/master/test/mse/mesh-cu.png)
+
 S. Scott Collis \
 Wed Mar 11 06:32:22 MDT 2020
