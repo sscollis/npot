@@ -10,7 +10,7 @@
 NAME   = npot 
 DEBUG  = 
 FFLAGS = -cpp -fdefault-real-8 -c $(DEBUG)
-OPT    = -fopenmp
+OPT    = -O2 -fopenmp
 OFLAGS = $(OPT) $(DEBUG) -o $(NAME)
 LIB    = -L$(HOME)/local/OpenBLAS/lib -lopenblas
 COMP   = gfortran 
