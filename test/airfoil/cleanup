@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -f comp.xyz cp.dat lns.dat restart.dat fort.* *.log output.*
+rm -f comp.xyz cp.dat lns.dat restart.dat *.pot fort.* *.log output.*
