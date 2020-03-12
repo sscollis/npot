@@ -1,0 +1,12 @@
+0.3		 ! Mach number
+0.00001,1     	 ! sigma, omega
+100		 ! niter
+0		 ! restart flag
+0.0		 ! sweep angle (deg)
+0, 1, 0          ! ispg, As, xs
+0.0              ! esp_e
+0 0 0 0 	 ! BC's: left, right, bottom, top
+F F		 ! xper, yper
+F F F F 	 ! lsym, rsym, bsym, tsym
+F		 ! Carpenter stencil
+41, 201, -0.18     ! na, nb, circ
