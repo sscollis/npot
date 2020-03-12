@@ -17,5 +17,19 @@ Note that this is a lifting airfoil so that there is a wake cut and the
 specification of circulation.  This should actually be computed as part of
 the solution process.
 
+### Sample Results
+
+#### Contours of streamwise velocity
+
+![Streamwise velocity](https://github.com/sscollis/npot/blob/master/test/airfoil/u.png)
+
+#### Computational Mesh
+
+![Mesh](https://github.com/sscollis/npot/blob/master/test/airfoil/mesh.png)
+
+#### Computational Mesh close-up
+
+![Mesh](https://github.com/sscollis/npot/blob/master/test/airfoil/mesh-cu.png)
+
 S. Scott Collis\
-Sat Feb 15 13:49:45 MST 2020
+Thu Mar 12 07:35:17 MDT 2020
