@@ -1,7 +1,5 @@
 ## NACA Airfoil
 
-Note:  This metric file is in JI ordering!
-
 ### Sample Results
 
 #### Contours of streamwise velocity
