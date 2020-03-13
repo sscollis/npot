@@ -1,10 +1,27 @@
+## Ofoil
+
 ### O-grid for an airfoil
 
-This run has trouble with the trailing edge boundary conditions
+This is a simple analytical airfoil of the form
 
-I suspect that it we put a little radius on the trailing edge that this would
-actually work.
+    y = t/0.2 * ( 0.2969 * sqrt(x) - 0.1281 * x - 0.3516 * x**2 + &
+        0.2843 * x**3 - 0.1015 * x**4 )
 
-Right now, I'm not going to mess with this more as a C-grid is a better idea
-anyway.
+Where the thickness, `t=0.1`.
 
+### Sample Results
+
+#### Contours of streamwise velocity
+
+![Streamwise velocity](https://github.com/sscollis/npot/blob/master/test/ofoil/rho.png)
+
+#### Computational Mesh
+
+![Mesh](https://github.com/sscollis/npot/blob/master/test/ofoil/mesh.png)
+
+#### Computational Mesh close-up
+
+![Mesh](https://github.com/sscollis/npot/blob/master/test/ofoil/rho-mesh.png)
+
+S. Scott Collis \
+Fri Mar 13 15:23:50 MDT 2020
