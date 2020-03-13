@@ -8,11 +8,11 @@ This is Mach 0.3 potential flow over a simple analytical airfoil of the form
         0.2843 * x**3 - 0.1015 * x**4 )
 
 Where the thickness, `t=0.1`.  Note that the trailing edge has been rounded
-using a 0.00255 radius circle.
+using a radius `0.00255` circle.
 
 ### Sample Results
 
-#### Contours of streamwise velocity
+#### Contours of density
 
 ![Streamwise velocity](https://github.com/sscollis/npot/blob/master/test/ofoil/rho.png)
 
@@ -20,7 +20,7 @@ using a 0.00255 radius circle.
 
 ![Mesh](https://github.com/sscollis/npot/blob/master/test/ofoil/mesh.png)
 
-#### Computational Mesh close-up
+#### Computational Mesh close-up with density contours
 
 ![Mesh](https://github.com/sscollis/npot/blob/master/test/ofoil/rho-mesh.png)
 
