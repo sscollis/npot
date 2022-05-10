@@ -9,7 +9,9 @@
 #==============================================================================
 NAME   = npot 
 DEBUG  = 
-FFLAGS = -cpp -fdefault-real-8 -c $(DEBUG)
+FFLAGS   = -cpp -fdefault-real-8 -fdefault-double-8 -ffixed-line-length-120 \
+-std=legacy -c $(DEBUG)
+F90FLAGS = -cpp -fdefault-real-8 -fdefault-double-8 -c $(DEBUG)
 OPT    = -O2 -fopenmp
 OFLAGS = $(OPT) $(DEBUG) -o $(NAME)
 LIB    = -L$(HOME)/local/OpenBLAS/lib -lopenblas
@@ -47,7 +49,7 @@ $(OBJS): $(MODS)
 $(MODS):
 
 .f90.o:
-	$(COMP) $(OPT) $(FFLAGS) $*.f90 
+	$(COMP) $(OPT) $(F90FLAGS) $*.f90 
 
 .f.o:
-	$(F77) $(OPT) $(FFLAGS) -ffixed-line-length-120 -std=legacy $*.f
+	$(F77) $(OPT) $(FFLAGS) $*.f
