@@ -34,4 +34,3 @@ To use paraview you may want to do:
 ![Mesh](https://github.com/sscollis/npot/blob/master/test/confpc/mesh-cu.png)
 
 S. Scott Collis \
-Wed Feb 19 06:22:30 MST 2020

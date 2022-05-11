@@ -25,4 +25,3 @@ using a radius `0.00255` circle.
 ![Mesh](https://github.com/sscollis/npot/blob/master/test/ofoil/rho-mesh.png)
 
 S. Scott Collis \
-Fri Mar 13 15:23:50 MDT 2020

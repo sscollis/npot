@@ -26,4 +26,3 @@ To use paraview you may want to do:
 ![Mesh](https://github.com/sscollis/npot/blob/master/test/ogrid/mesh.png)
 
 S. Scott Collis\
-Tue Feb 18 06:38:00 MST 2020

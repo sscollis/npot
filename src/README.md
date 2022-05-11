@@ -15,4 +15,3 @@ To build do the following:
 Where, for example, `<platform>` is `gcc` when using `gfortran` on Mac OS X
 
 S. Scott Collis\
-Wed Mar 11 07:00:11 MDT 2020

@@ -32,4 +32,3 @@ the solution process.
 ![Mesh](https://github.com/sscollis/npot/blob/master/test/airfoil/mesh-cu.png)
 
 S. Scott Collis\
-Thu Mar 12 07:35:17 MDT 2020

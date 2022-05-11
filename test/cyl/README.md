@@ -25,4 +25,3 @@ To use `paraview` you may want to do:
 ![Mesh](https://github.com/sscollis/npot/blob/master/test/cyl/mesh.png)
 
 S. Scott Collis\
-Sun Mar  8 08:10:46 MDT 2020
