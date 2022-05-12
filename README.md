@@ -26,4 +26,4 @@ Notes:
   3. While it would be nice and relatively easy to automate this, that
      remains a todo item.
 
-S. Scott Collis \
+S. Scott Collis
