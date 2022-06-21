@@ -30,6 +30,7 @@ You can plot the wall pressure gradient using `gnuplot` with
 gnuplot
 load "dpds.com" 
 ```
+or use Python with the script `dpds.py` which outputs the plot as `wall.png`.
 
 ### Sample Results
 
