@@ -8,9 +8,12 @@ Mach 0.4 potential flow past a parabolic cylinder
 2. Note that you need the `confpc` mesh generator
 3. Also note that `confpc` uses the old `ji` ordering so
    that you need to use the `-ms` option when running `npot`
-4. `./run.sh`
+4. NB:  I have updated `confpc` so that it outputs IJ ordering so `-ms` is
+   no longer needed.
+4. `./run.sh 0`  where `0` indicates the case number to be run which amount
+   to different versions of the input file to `confpc`.
 
-Note that to enhanse convergence, this script restarts with
+Note that to enhance convergence, this script restarts with
 several different values of `sigma` 
 
 ### Visualization
