@@ -24,7 +24,7 @@
 !.... hard boundary condition on top side
 
         if (top.eq.0) then
-          if (restart .eq. 3) then
+          if (restart.eq.3) then
             allocate( etab(nx), xib(nx) )
             etab = sqrt(pt5 - xy(1,:,ny) + &
                    pt5*sqrt((two*xy(1,:,ny)-one)**2 + four * xy(2,:,ny)**2))
@@ -41,6 +41,21 @@
             end do
           end if
         end if
+
+!.... Parabolic Cylinder M=0 on top
+
+        if (top.eq.3) then
+          allocate( etab(nx), xib(nx) )
+          etab = sqrt(pt5 - xy(1,:,ny) + &
+                 pt5*sqrt((two*xy(1,:,ny)-one)**2 + four * xy(2,:,ny)**2))
+          xib = xy(2,:,ny) / etab
+          phi(1:bx,ny) = pt5 * ( xib(1:bx)**2 - etab(1:bx)**2 ) + &
+                         etab(1:bx)
+          deallocate( etab, xib )
+        else if (top.eq.4) then
+            phi(1:bx,ny) = xy(1,1:bx,ny) + pt5 * log( xy(1,1:bx,ny)**2 + &
+                           xy(2,1:bx,ny)**2 )
+        endif
 
 !.... Reimann on top boundary
 
@@ -173,7 +188,7 @@
 !.... hard boundary condition on right side
 
         if (right.eq.0) then
-          if (restart .eq. 3) then
+          if (restart.eq.3) then
             allocate( etab(ny), xib(ny) )
             etab = sqrt(pt5 - xy(1,nx,:) + pt5*sqrt((two*xy(1,nx,:)-one)**2 + &
                    four * xy(2,nx,:)**2))
@@ -190,6 +205,21 @@
             end do
           end if
         end if
+
+!.... Parabolic cylinder for M=0 on right side
+
+        if (right.eq.3) then
+          allocate( etab(ny), xib(ny) )
+          etab = sqrt(pt5 - xy(1,nx,:) + pt5*sqrt((two*xy(1,nx,:)-one)**2 + &
+                 four * xy(2,nx,:)**2))
+          xib = xy(2,nx,:) / etab
+          phi(nx,1:by) = pt5 * ( xib(1:by)**2 - etab(1:by)**2 ) + &
+                         etab(1:by)
+          deallocate( etab, xib )
+        else if (right.eq.4) then
+          phi(nx,1:by) = xy(1,nx,1:by) + pt5 * log( xy(1,nx,1:by)**2 + &
+                         xy(2,nx,1:by)**2 )
+        endif
 
 !.... Reimann on right boundary
 

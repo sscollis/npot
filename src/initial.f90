@@ -16,6 +16,8 @@ function field(il,jl)
     end if
   end if
 
+!  write(*,*) "na, circ, field = ", na, circ, field
+
 end function field
   
 !============================================================================!
@@ -35,7 +37,7 @@ end function field
 !....    x = 1/2 * ( xi^2 - eta^2 ) + 1/2
 !....    y = xi * eta
 
-        if (restart .eq. 0) then             ! uniform flow in the +x direction
+        if (restart.eq.0) then             ! uniform flow in the +x direction
           !$omp parallel do private(i)
           do j = 1, ny
             do i = 1, nx
@@ -50,11 +52,11 @@ end function field
             write(55,"(5(1pe13.6,1x))") xy(1,i,1), phil, phiu, phiu-phil
           end do
           !call flush(55)
-        else if (restart .eq. 1) then        ! restart from a previous solution
+        else if (restart.eq.1) then        ! restart from a previous solution
           open(20,file='restart.dat',form='unformatted',status='old',err=10)
           read(20) phi
           close(20)
-        else if (restart .eq. 2) then        ! attempt to add mach correction
+        else if (restart.eq.2) then        ! attempt to add mach correction
           beta = sqrt(one - Ma**2)
           !$omp parallel do private(i,etal,xil,u,v,t,rho)
           do j = 1, ny
@@ -71,7 +73,7 @@ end function field
               rho = t**(one/gamma1)
             end do
           end do
-        else if (restart .eq. 3) then        ! works for pcyl
+        else if (restart.eq.3) then        ! works for pcyl
           !$omp parallel do private(i,etal,xil,u,v,t,rho)
           do j = 1, ny
             do i = 1, nx
@@ -86,7 +88,7 @@ end function field
               rho = t**(one/gamma1)
             end do
           end do
-        else if (restart .eq. 4) then
+        else if (restart.eq.4) then
           !$omp parallel do private(i,etal,xil,u,v,t,rho)
           do j = 1, ny
             do i = 1, nx

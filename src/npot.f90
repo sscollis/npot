@@ -622,15 +622,23 @@
           write(*,"(i4,1x,3(1pe16.8E3,1x))") na, xy(1,nb,1), xy(2,nb,1), p(nb,1)
         endif
 
-        if (.true.) then
-        open(unit=10, file='cp.dat', form='formatted')
-        do i = nb,nx
-          ia = nx - i + 1
-          write(10,"(8(1pe12.4E3,1x))")  xy(1,i,1),  q(4,i,1), q(3,i,1), &
-                                         xy(1,ia,1), q(4,ia,1), q(3,ia,1)
-!         write(*,"(8(1pe9.2,1x))") m(1,i,1), m(2,i,1), m(3,i,1), m(4,i,1)
-        end do
-        close(10)
+        if (wakecut) then
+          open(unit=10, file='cp.dat', form='formatted')
+          write(*,*) "Output cp.dat with na, nb = ", na, nb
+          do i = nb,nx
+            ia = nx - i + 1
+            write(10,"(8(1pe12.4E3,1x))")  xy(1,i,1),  q(4,i,1), q(3,i,1), &
+                                           xy(1,ia,1), q(4,ia,1), q(3,ia,1)
+!           write(*,"(8(1pe9.2,1x))") m(1,i,1), m(2,i,1), m(3,i,1), m(4,i,1)
+          end do
+          close(10)
+        else
+          open(unit=10, file='cp.dat', form='formatted')
+          write(*,*) "Output cp.dat"
+          do i = 1,nx
+            write(10,"(8(1pe12.4E3,1x))")  xy(1,i,1),  q(4,i,1), q(3,i,1)
+          end do
+          close(10)
         end if
 
 !.... write out a Plot3d file
@@ -652,7 +660,7 @@
         write(10) nx, ny, nz
         write(10) ((( xi(i), i = 1, nx), j = 1, ny), k = 1, nz), &
                   (((eta(j), i = 1, nx), j = 1, ny), k = 1, nz), &
-                  (((  zero, i = 1, nx), j = 1, ny), k = 1, nz)
+                  ((( zero, i = 1, nx), j = 1, ny), k = 1, nz)
         close(10)
 
 !.... write out a restart file
@@ -670,13 +678,13 @@
 !$omp parallel do private(i,j,g1phil,g2phil,u,v,t,rho)
         do j = 1, ny2
           do i = 1, nx
-            g1phil  = gphi(1,i,j) * m(1,i,j) + gphi(2,i,j) * m(3,i,j)
-            g2phil  = gphi(1,i,j) * m(2,i,j) + gphi(2,i,j) * m(4,i,j)
+            g1phil = gphi(1,i,j) * m(1,i,j) + gphi(2,i,j) * m(3,i,j)
+            g2phil = gphi(1,i,j) * m(2,i,j) + gphi(2,i,j) * m(4,i,j)
             u   = g1phil
             v   = g2phil
             t   = one + gamma1 * Ma**2 * pt5 * (one-u**2-v**2 )
             rho = t ** ( one / gamma1 )
-            p(i,j)   =  rho * t / (gamma * Ma**2)
+            p(i,j)   = rho * t / (gamma * Ma**2)
             q(1,i,j) = rho
             q(2,i,j) = u
             q(3,i,j) = v

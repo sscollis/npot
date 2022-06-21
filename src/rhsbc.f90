@@ -30,6 +30,12 @@
           end do
         end if
  
+        if (top.eq.3.or.top.eq.4) then
+          do i = 1, bx
+            res(i,ny) = zero
+          end do
+        end if
+
 !.... Reimann on top boundary
 
 !!$     if (top.eq.1) then
@@ -147,6 +153,10 @@
           res(nx,1:by) = zero
         end if
         
+        if (right.eq.3.or.right.eq.4) then
+          res(nx,1:by) = zero
+        end if
+
 !.... Reimann on right boundary
 
 !!$     if (right.eq.1) then

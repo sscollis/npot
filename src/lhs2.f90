@@ -240,7 +240,8 @@
 
 !.... right boundary condition
 
-        if (right.eq.0 .or. right.eq.1 .or. right.eq.2) then
+        if (right.eq.0.or.right.eq.1.or.right.eq.2.or.right.eq.3 &
+            .or.right.eq.4) then
 !$omp parallel do private(j)
           do j = 1, by
             mat(:,nx,j) = zero
@@ -254,7 +255,7 @@
         
 !.... top boundary condition
 
-        if (top.eq.0) then
+        if (top.eq.0.or.top.eq.3.or.top.eq.4) then
           mat(:,1:bx,ny) = zero
           mat(3,1:bx,ny) = -one
         else if (top.eq.1) then

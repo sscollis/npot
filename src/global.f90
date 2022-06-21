@@ -44,7 +44,7 @@
                 
 !.... wake cut treatment
 
-        integer :: na, nb
+        integer :: na=0, nb=0
 
 !.... flags
 #ifndef __GFORTRAN__
