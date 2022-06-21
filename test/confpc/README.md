@@ -22,6 +22,15 @@ To use paraview you may want to do:
 
     ln -s grid.dat grid.xyz
 
+Wall values (like $C_p$ and $\partial p/\partial s$ are available in 
+`wall.dat.0` (replace `0` with other case numbers as needed).
+
+You can plot the wall pressure gradient using `gnuplot` with
+```bash
+gnuplot
+load "dpds.com" 
+```
+
 ### Sample Results
 
 #### Contours of streamwise velocity
