@@ -33,6 +33,10 @@ load "dpds.com"
 
 ### Sample Results
 
+#### Pressure gradient
+
+![Pressure gradient](https://github.com/sscollis/npot/blob/master/test/confpc/dpds.png)
+
 #### Contours of streamwise velocity
 
 ![Streamwise velocity](https://github.com/sscollis/npot/blob/master/test/confpc/u.png)
