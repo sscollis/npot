@@ -51,3 +51,4 @@ or use Python with the script `dpds.py` which outputs the plot as `wall.png`.
 ![Mesh](https://github.com/sscollis/npot/blob/master/test/confpc/mesh-cu.png)
 
 S. Scott Collis \
+flow.physics.simulation@gmail.com
