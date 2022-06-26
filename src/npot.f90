@@ -624,7 +624,7 @@
 
         if (wakecut) then
           open(unit=10, file='cp.dat', form='formatted')
-          write(*,*) "Output cp.dat with na, nb = ", na, nb
+          !write(*,*) "Output cp.dat with na, nb = ", na, nb
           do i = nb,nx
             ia = nx - i + 1
             write(10,"(8(1pe12.4E3,1x))")  xy(1,i,1),  q(4,i,1), q(3,i,1), &
@@ -634,7 +634,7 @@
           close(10)
         else
           open(unit=10, file='cp.dat', form='formatted')
-          write(*,*) "Output cp.dat"
+          !write(*,*) "Output cp.dat"
           do i = 1,nx
             write(10,"(8(1pe12.4E3,1x))")  xy(1,i,1),  q(4,i,1), q(3,i,1)
           end do
