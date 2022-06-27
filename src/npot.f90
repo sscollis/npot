@@ -100,6 +100,8 @@
         real, external :: field
 
         integer, external :: OMP_GET_NUM_THREADS
+
+        real :: p0=0, pinf=0
 !============================================================================!
 
 !.... initialize global variables (must do on SGI)
@@ -617,6 +619,9 @@
           end do
         end do
 
+        pinf = one/(gamma*Ma**2) 
+        p0 = (one + pt5*gamma1*Ma**2)**(gamma/gamma1)
+
         if (wakecut) then
           write(*,"(i4,1x,3(1pe16.8E3,1x))") na, xy(1,na,1), xy(2,na,1), p(na,1)
           write(*,"(i4,1x,3(1pe16.8E3,1x))") na, xy(1,nb,1), xy(2,nb,1), p(nb,1)
@@ -627,8 +632,10 @@
           !write(*,*) "Output cp.dat with na, nb = ", na, nb
           do i = nb,nx
             ia = nx - i + 1
-            write(10,"(8(1pe12.4E3,1x))")  xy(1,i,1),  q(4,i,1), q(3,i,1), &
-                                           xy(1,ia,1), q(4,ia,1), q(3,ia,1)
+            write(10,"(8(1pe12.4E3,1x))")  xy(1,i,1), q(4,i,1), &
+                                           two*(q(5,i,1)-pinf), &
+                                           xy(1,ia,1), q(4,ia,1), &
+                                           two*(q(5,ia,1)-pinf)
 !           write(*,"(8(1pe9.2,1x))") m(1,i,1), m(2,i,1), m(3,i,1), m(4,i,1)
           end do
           close(10)
@@ -636,7 +643,9 @@
           open(unit=10, file='cp.dat', form='formatted')
           !write(*,*) "Output cp.dat"
           do i = 1,nx
-            write(10,"(8(1pe12.4E3,1x))")  xy(1,i,1),  q(4,i,1), q(3,i,1)
+            !write(10,"(8(1pe12.4E3,1x))") xy(1,i,1), q(4,i,1), q(3,i,1)
+            write(10,"(8(1pe12.4E3,1x))")  xy(1,i,1), q(4,i,1), &
+                                           two*(q(5,i,1)-pinf)
           end do
           close(10)
         end if
