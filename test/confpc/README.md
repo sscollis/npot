@@ -36,6 +36,10 @@ or use Python with the script `dpds.py` which outputs the plot as `wall.png`.
 
 #### Pressure gradient
 
+Note that these results indicate that resolution should be increased 
+near the leading edge.  There are higher resolution runs in the
+`lns3d/test/pcyl` directory.
+
 ![Pressure gradient](https://github.com/sscollis/npot/blob/master/test/confpc/dpds.png)
 
 #### Contours of streamwise velocity
