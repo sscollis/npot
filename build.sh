@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Build a fresh version
+# Build a fresh version of npot
 #
 # Revised:  8/15/22
 # Author:   S.Scott Collis 
